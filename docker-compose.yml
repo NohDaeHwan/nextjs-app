@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  db:
+    image: postgres:latest
+    container_name: nextjs-app-db
+    restart: always
+    ports:
+      - "5431:5431"
+    environment:
+      POSTGRES_DB: nextjs-app-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Roqkfwk5953!
+    volumes:
+      - ./data:/var/lib/postgresql/data
